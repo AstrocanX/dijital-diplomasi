@@ -9,8 +9,8 @@
 | Bilgisayarınız | Dosya | Boyut |
 |---|---|---|
 | **Windows 10 / 11** | [Dijital-Diplomasi-Windows-Setup.exe](https://github.com/AstrocanX/dijital-diplomasi/releases/latest/download/Dijital-Diplomasi-Windows-Setup.exe) | 160 MB |
-| **Mac, Apple Silicon** (M1, M2, M3, M4) | [Dijital-Diplomasi-Mac-Apple-Silicon.dmg](https://github.com/AstrocanX/dijital-diplomasi/releases/latest/download/Dijital-Diplomasi-Mac-Apple-Silicon.dmg) | 188 MB |
-| **Mac, Intel işlemci** | [Dijital-Diplomasi-Mac-Intel.dmg](https://github.com/AstrocanX/dijital-diplomasi/releases/latest/download/Dijital-Diplomasi-Mac-Intel.dmg) | 195 MB |
+| **Mac, Apple Silicon** (M1, M2, M3, M4) | [Dijital-Diplomasi-Mac-Apple-Silicon.dmg](https://github.com/AstrocanX/dijital-diplomasi/releases/latest/download/Dijital-Diplomasi-Mac-Apple-Silicon.dmg) | 197 MB |
+| **Mac, Intel işlemci** | [Dijital-Diplomasi-Mac-Intel.dmg](https://github.com/AstrocanX/dijital-diplomasi/releases/latest/download/Dijital-Diplomasi-Mac-Intel.dmg) | 205 MB |
 
 Mac'inizin hangisi olduğunu bilmiyorsanız: Apple menüsü › **Bu Mac Hakkında**. "Çip: Apple M…" yazıyorsa Apple Silicon, "İşlemci: Intel" yazıyorsa Intel dosyasını indirin.
 
