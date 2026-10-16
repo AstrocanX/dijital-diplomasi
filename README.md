@@ -8,7 +8,7 @@
 
 | Bilgisayarınız | Dosya | Boyut |
 |---|---|---|
-| **Windows 10 / 11** | [Dijital-Diplomasi-Windows-Setup.exe](https://github.com/AstrocanX/dijital-diplomasi/releases/latest/download/Dijital-Diplomasi-Windows-Setup.exe) | 153 MB |
+| **Windows 10 / 11** | [Dijital-Diplomasi-Windows-Setup.exe](https://github.com/AstrocanX/dijital-diplomasi/releases/latest/download/Dijital-Diplomasi-Windows-Setup.exe) | 160 MB |
 | **Mac, Apple Silicon** (M1, M2, M3, M4) | [Dijital-Diplomasi-Mac-Apple-Silicon.dmg](https://github.com/AstrocanX/dijital-diplomasi/releases/latest/download/Dijital-Diplomasi-Mac-Apple-Silicon.dmg) | 188 MB |
 | **Mac, Intel işlemci** | [Dijital-Diplomasi-Mac-Intel.dmg](https://github.com/AstrocanX/dijital-diplomasi/releases/latest/download/Dijital-Diplomasi-Mac-Intel.dmg) | 195 MB |
 
@@ -38,13 +38,13 @@ Bu uyarılar uygulama ücretli Apple ve Microsoft geliştirici sertifikasıyla i
 ## İlk açılış
 
 - Tweet metinleri kurulum paketinin içindedir. İlk açılışta kendiliğinden yerleşir.
-- Giriş için ekip yöneticisinin açtığı kullanıcı adı ve parola gerekir.
+- Giriş için kullanıcı adı ve parola gerekir. Hesabınız yoksa ekip yöneticisinden erişim kodu alın ve uygulamanın giriş ekranındaki **Kayıt ol** sekmesinden kendi hesabınızı açın.
 - Görseller ve videolar isteğe bağlıdır. Giriş yaptıktan sonra üst çubuktaki **↓ Medya** düğmesiyle indirilir: yaklaşık 7,8 GB, 8,5 GB boş alan gerekir. İndirme yarıda kalırsa kaldığı yerden sürer.
 - Yeni sürümler uygulamanın içinden duyurulur.
 
 ## Sık sorulanlar
 
-**Hesabım yok.** Ekip yöneticisinden hesap isteyin. Bu sayfada kayıt yoktur.
+**Hesabım yok.** Ekip yöneticisinden erişim kodu isteyin (`DIP-XXXX-XXXX-XXXX-XXXX`). Uygulamada **Kayıt ol** sekmesine kodu, kullanıcı adınızı ve parolanızı girin. Bu sayfada kayıt yoktur.
 
 **Medya indirmesi başlamıyor.** Önce hesabınızla giriş yapın. Medya arşivi yalnızca ekip üyelerine açıktır.
 
