@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dijital Diplomasi İndir</title>
+<meta name="description" content="Pandemi Döneminde Dijital Diplomasi araştırma uygulaması: Windows ve Mac kurulum paketleri.">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+ color-scheme:light;
+ --bg:#efeef6;--surface:#ffffff;--raised:#f2effa;--line:#e4e0ee;--line2:#d3cde3;
+ --ink:#1f1b2e;--ink2:#3d3758;--muted:#5b5470;
+ --nane:#c9f1df;--nane-i:#0e5340;--nane-s:#2f8a68;
+ --gul:#fbd5df;--gul-i:#7a2338;--gul-s:#c4507a;
+ --gok:#cfe5fb;--gok-i:#1d4f7a;--gok-s:#2f6fb0;
+ --lila:#e3d9fb;--lila-i:#42298a;--lila-s:#6b55a8;
+ --tere:#fbefb6;--tere-i:#5e4a06;--tere-s:#a98a12;
+ --seft:#fde0c9;--seft-i:#7a3c12;--seft-s:#c4672e;
+ --mer:#fcd1c6;--mer-i:#7f2a1b;--mer-s:#b8492f;
+ --shadow:0 1px 2px rgba(31,27,46,.05),0 10px 28px rgba(31,27,46,.07);
+ --font:Nunito,ui-rounded,"SF Pro Rounded","Segoe UI Variable Display","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+ color-scheme:dark;
+ --bg:#14111f;--surface:#1c1830;--raised:#241e3b;--line:#322b4d;--line2:#433b63;
+ --ink:#f1eefb;--ink2:#d6d0ea;--muted:#b8b0d1;
+ --nane:#17392f;--nane-i:#bfeedb;--nane-s:#6fd3ab;
+ --gul:#3d1b29;--gul-i:#fbd3dc;--gul-s:#f08aa6;
+ --gok:#17324d;--gok-i:#cfe6fb;--gok-s:#7fb8ec;
+ --lila:#2d2452;--lila-i:#e2d7fb;--lila-s:#b49cf5;
+ --tere:#3a3112;--tere-i:#f7e7a1;--tere-s:#e0c45a;
+ --seft:#41271a;--seft-i:#fde0c8;--seft-s:#f29a5c;
+ --mer:#411e18;--mer-i:#fcd0c6;--mer-s:#ee7b62;
+ --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px rgba(0,0,0,.25);
+}}
+:root[data-theme="dark"]{
+ color-scheme:dark;
+ --bg:#14111f;--surface:#1c1830;--raised:#241e3b;--line:#322b4d;--line2:#433b63;
+ --ink:#f1eefb;--ink2:#d6d0ea;--muted:#b8b0d1;
+ --nane:#17392f;--nane-i:#bfeedb;--nane-s:#6fd3ab;
+ --gul:#3d1b29;--gul-i:#fbd3dc;--gul-s:#f08aa6;
+ --gok:#17324d;--gok-i:#cfe6fb;--gok-s:#7fb8ec;
+ --lila:#2d2452;--lila-i:#e2d7fb;--lila-s:#b49cf5;
+ --tere:#3a3112;--tere-i:#f7e7a1;--tere-s:#e0c45a;
+ --seft:#41271a;--seft-i:#fde0c8;--seft-s:#f29a5c;
+ --mer:#411e18;--mer-i:#fcd0c6;--mer-s:#ee7b62;
+ --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:600 16px/1.55 var(--font)}
+a{color:var(--gok-s)}
+.wrap{max-width:980px;margin:0 auto;padding:40px 16px 64px}
+header{display:flex;align-items:center;gap:16px;margin-bottom:28px}
+.mark{flex:none;width:56px;height:56px;border-radius:18px;background:var(--lila);color:var(--lila-i);display:grid;place-items:center}
+.mark svg{width:30px;height:30px}
+h1{margin:0;font-size:clamp(24px,4.2vw,34px);line-height:1.15;font-weight:900;letter-spacing:-.01em}
+.sub{margin:4px 0 0;color:var(--muted);font-size:15px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow)}
+.download{display:flex;flex-direction:column;gap:10px}
+.download h2{margin:0;font-size:20px;font-weight:900}
+.download p{margin:0;color:var(--muted);font-size:14px}
+.tag{align-self:flex-start;font-size:12px;font-weight:800;padding:3px 10px;border-radius:999px}
+.win .tag{background:var(--gok);color:var(--gok-i)}
+.arm .tag{background:var(--nane);color:var(--nane-i)}
+.intel .tag{background:var(--seft);color:var(--seft-i)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:auto;padding:13px 18px;border-radius:14px;font:800 16px/1 var(--font);text-decoration:none;color:#fff;border:0}
+.win .btn{background:var(--gok-s)}.arm .btn{background:var(--nane-s)}.intel .btn{background:var(--seft-s)}
+:root[data-theme="dark"] .btn{color:#14111f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{color:#14111f}}
+.btn:hover{filter:brightness(1.07)}
+.btn:focus-visible,summary:focus-visible,.theme:focus-visible{outline:2px solid var(--gok-s);outline-offset:3px}
+.btn svg{width:18px;height:18px}
+.size{font-size:12px;color:var(--muted)}
+.mine{outline:3px solid var(--lila-s);outline-offset:2px}
+.mine::after{content:"Bu bilgisayar için önerilen";font-size:12px;font-weight:800;color:var(--lila-i);background:var(--lila);border-radius:999px;padding:3px 10px;align-self:flex-start;order:-1}
+section{margin-top:34px}
+section>h2{font-size:22px;font-weight:900;margin:0 0 12px}
+.steps{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+details{background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);overflow:hidden}
+summary{cursor:pointer;list-style:none;padding:18px 22px;font-weight:900;font-size:17px;display:flex;align-items:center;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";margin-left:auto;font-size:22px;color:var(--muted)}
+details[open] summary::after{content:"–"}
+ol{margin:0;padding:0 22px 20px 44px}
+ol li{margin:8px 0}
+.shot{margin:10px 0 4px;border:1px solid var(--line2);border-radius:14px;background:var(--raised);padding:12px;font-size:13px;color:var(--ink2)}
+.shot b{display:block;font-size:14px;color:var(--ink)}
+.fake-btn{display:inline-block;margin-top:8px;padding:5px 12px;border-radius:8px;font-weight:800;font-size:13px}
+.fake-btn.primary{background:var(--gok-s);color:#fff}
+.fake-btn.plain{border:1px solid var(--line2);color:var(--ink2)}
+.fake-link{color:var(--gok-s);text-decoration:underline;font-weight:800}
+code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:13px;background:var(--raised);border:1px solid var(--line);border-radius:8px;padding:2px 6px;word-break:break-all}
+.note{border-radius:22px;padding:18px 22px;background:var(--tere);color:var(--tere-i)}
+.note h3{margin:0 0 6px;font-size:16px;font-weight:900}
+.note p{margin:4px 0;font-size:14px}
+.facts{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.fact{border-radius:22px;padding:18px 20px}
+.fact h3{margin:0 0 4px;font-size:16px;font-weight:900}
+.fact p{margin:0;font-size:14px}
+.f1{background:var(--lila);color:var(--lila-i)}.f2{background:var(--gul);color:var(--gul-i)}.f3{background:var(--nane);color:var(--nane-i)}
+footer{margin-top:40px;color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}
+.theme{margin-left:auto;background:var(--surface);color:var(--ink2);border:1px solid var(--line2);border-radius:999px;padding:6px 14px;font:800 13px var(--font);cursor:pointer}
+@media (max-width:520px){.wrap{padding-top:24px}header{align-items:flex-start}.mark{width:46px;height:46px;border-radius:15px}ol{padding-left:36px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <header>
+  <div class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></svg></div>
+  <div>
+   <h1>Pandemi Döneminde Dijital Diplomasi</h1>
+   <p class="sub">Araştırma masası · <span id="version">son sürüm</span> · Windows ve Mac</p>
+  </div>
+ </header>
+
+ <div class="grid" id="downloads">
+  <div class="card download win" data-os="win">
+   <span class="tag">Windows 10 / 11</span>
+   <h2>Windows</h2>
+   <p>Tek tıkla kurulur. Kurulum bitince uygulama kendiliğinden açılır, masaüstüne kısayol eklenir.</p>
+   <span class="size">Setup.exe · yaklaşık 190 MB</span>
+   <a class="btn" href="https://github.com/AstrocanX/dijital-diplomasi/releases/latest/download/Dijital-Diplomasi-Windows-Setup.exe" title="Windows kurulum dosyasını indirir">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>Windows için indir</a>
+  </div>
+  <div class="card download arm" data-os="arm">
+   <span class="tag">M1 · M2 · M3 · M4</span>
+   <h2>Mac (Apple Silicon)</h2>
+   <p>2020 sonrası Mac'ler. Disk görüntüsünü açın, uygulamayı Uygulamalar klasörüne sürükleyin.</p>
+   <span class="size">.dmg · yaklaşık 200 MB</span>
+   <a class="btn" href="https://github.com/AstrocanX/dijital-diplomasi/releases/latest/download/Dijital-Diplomasi-Mac-Apple-Silicon.dmg" title="Apple Silicon Mac için disk görüntüsünü indirir">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>Apple Silicon için indir</a>
+  </div>
+  <div class="card download intel" data-os="intel">
+   <span class="tag">Intel işlemci</span>
+   <h2>Mac (Intel)</h2>
+   <p>Eski Mac'ler. Emin değilseniz: Apple menüsü › Bu Mac Hakkında › "Çip" yazıyorsa Apple Silicon, "İşlemci" yazıyorsa Intel.</p>
+   <span class="size">.dmg · yaklaşık 210 MB</span>
+   <a class="btn" href="https://github.com/AstrocanX/dijital-diplomasi/releases/latest/download/Dijital-Diplomasi-Mac-Intel.dmg" title="Intel Mac için disk görüntüsünü indirir">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>Intel Mac için indir</a>
+  </div>
+ </div>
+
+ <section>
+  <div class="facts">
+   <div class="fact f1"><h3>Hesap gerekli</h3><p>Uygulamayı ekip yöneticisinin açtığı kullanıcı adı ve şifreyle kullanırsınız.</p></div>
+   <div class="fact f2"><h3>Tweet metinleri dahil</h3><p>12.824 tweet metni pakette gelir. Görseller ve videolar (yaklaşık 7,8 GB) uygulamadaki "↓ Medya" düğmesiyle isteğe bağlı iner.</p></div>
+   <div class="fact f3"><h3>Kendiliğinden güncellenir</h3><p>Yeni sürüm çıkınca uygulama haber verir. Bu sayfaya tekrar gelmeniz gerekmez.</p></div>
+  </div>
+ </section>
+
+ <section>
+  <h2>İlk açılışta uyarı çıkarsa</h2>
+  <div class="note">
+   <h3>Neden uyarı çıkıyor?</h3>
+   <p>Uygulama ücretli geliştirici sertifikasıyla imzalanmadı. Windows ve macOS bu yüzden "tanınmayan uygulama" uyarısı gösterir. Bu uyarı bir kez geçilir; sonraki açılışlarda çıkmaz.</p>
+  </div>
+  <div class="steps" style="margin-top:14px">
+   <details id="win-guide">
+    <summary>Windows: "Windows bilgisayarınızı korudu"</summary>
+    <ol>
+     <li>İndirilen <b>Dijital-Diplomasi-Windows-Setup.exe</b> dosyasını çift tıklayın.</li>
+     <li>Mavi pencere açılırsa <b>Daha fazla bilgi</b> bağlantısına tıklayın.
+      <div class="shot"><b>Windows bilgisayarınızı korudu</b>Microsoft Defender SmartScreen tanınmayan bir uygulamanın başlatılmasını engelledi.<br><span class="fake-link">Daha fazla bilgi</span><br><span class="fake-btn plain">Çalıştırma</span></div></li>
+     <li>Altta beliren <b>Yine de çalıştır</b> düğmesine tıklayın.
+      <div class="shot"><b>Uygulama: Dijital-Diplomasi-Windows-Setup.exe</b>Yayımcı: Bilinmeyen yayımcı<br><span class="fake-btn primary">Yine de çalıştır</span> <span class="fake-btn plain">Çalıştırma</span></div></li>
+     <li>Kurulum birkaç saniye sürer, sonra uygulama açılır. Kullanıcı adınız ve şifrenizle giriş yapın.</li>
+     <li>Tarayıcı indirmeyi engellerse indirmeler listesinde dosyanın yanındaki <b>⋯</b> › <b>Koru</b> seçeneğini kullanın.</li>
+    </ol>
+   </details>
+   <details id="mac-guide">
+    <summary>Mac: "Apple doğrulayamadı"</summary>
+    <ol>
+     <li>İndirilen <b>.dmg</b> dosyasını açın. <b>Dijital Diplomasi</b> simgesini <b>Applications</b> (Uygulamalar) klasörüne sürükleyin.</li>
+     <li>Uygulamayı Uygulamalar klasöründen açın. Uyarı çıkarsa <b>Bitti</b> düğmesine basın (Taşı'ya basmayın).
+      <div class="shot"><b>"Dijital Diplomasi" açılmadı</b>Apple, "Dijital Diplomasi" uygulamasının Mac'inize zarar verebilecek kötü amaçlı yazılım içermediğini doğrulayamadı.<br><span class="fake-btn primary">Bitti</span> <span class="fake-btn plain">Çöp Sepetine Taşı</span></div></li>
+     <li>Apple menüsü › <b>Sistem Ayarları</b> › <b>Gizlilik ve Güvenlik</b> bölümüne gidin. Aşağı kaydırın.</li>
+     <li><b>Yine de Aç</b> düğmesine tıklayın, Mac şifrenizi girin.
+      <div class="shot"><b>Güvenlik</b>"Dijital Diplomasi" kimliği belirlenmiş bir geliştiriciden gelmediği için engellendi.<br><span class="fake-btn primary">Yine de Aç</span></div></li>
+     <li>Son pencerede tekrar <b>Yine de Aç</b> deyin. Bu işlem bir kez yapılır.</li>
+     <li>macOS 14 veya daha eski sürümde kısa yol: uygulamaya <b>sağ tıklayın</b> › <b>Aç</b> › <b>Aç</b>.</li>
+     <li>Düğme görünmezse Terminal'e şu satırı yapıştırıp Enter'a basın, sonra uygulamayı açın:<br><code>xattr -dr com.apple.quarantine "/Applications/Dijital Diplomasi.app"</code></li>
+    </ol>
+   </details>
+  </div>
+ </section>
+
+ <section>
+  <h2>Sık sorulanlar</h2>
+  <div class="steps">
+   <details><summary>Kurulum araştırma kayıtlarımı siler mi?</summary><ol style="list-style:none;padding-left:22px"><li>Hayır. Kayıtlar kullanıcı klasöründe ayrı tutulur ve ekip sunucusuyla eşitlenir. Uygulamayı kaldırmak da kayıtları silmez.</li></ol></details>
+   <details><summary>Görseller neden görünmüyor?</summary><ol style="list-style:none;padding-left:22px"><li>Görseller ve videolar isteğe bağlıdır. Sağ üstteki <b>↓ Medya</b> düğmesine basın. İndirme yarıda kalırsa kaldığı yerden devam eder; yaklaşık 8,5 GB boş alan gerekir.</li></ol></details>
+   <details><summary>Hesabım yok, ne yapmalıyım?</summary><ol style="list-style:none;padding-left:22px"><li>Ekip yöneticisinden hesap isteyin. Hesaplar yalnız yönetici tarafından açılır.</li></ol></details>
+   <details><summary>Hangi Mac paketini seçmeliyim?</summary><ol style="list-style:none;padding-left:22px"><li>Apple menüsü › Bu Mac Hakkında. "Çip: Apple M…" yazıyorsa Apple Silicon, "İşlemci: Intel" yazıyorsa Intel paketini indirin.</li></ol></details>
+  </div>
+ </section>
+
+ <footer>
+  <span>Pandemi Döneminde Dijital Diplomasi · Türkiye ve ABD dışişleri, 2020–2022</span>
+  <a href="https://github.com/AstrocanX/dijital-diplomasi/releases" title="Tüm sürümleri ve dosyaları gösterir">Tüm sürümler</a>
+  <button class="theme" type="button" id="theme" title="Açık ve koyu görünüm arasında geçiş yapar">Görünüm</button>
+ </footer>
+</div>
+<script>
+(()=>{
+ // Highlight the package for this computer; every package stays available.
+ const ua=navigator.userAgent||'',platform=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||'';
+ let os=null;
+ if(/Win/i.test(platform)||/Windows/i.test(ua))os='win';
+ else if(/Mac/i.test(platform)||/Mac OS X/i.test(ua)){
+  os='arm';
+  try{const gl=document.createElement('canvas').getContext('webgl'),ext=gl&&gl.getExtension('WEBGL_debug_renderer_info'),r=ext?gl.getParameter(ext.UNMASKED_RENDERER_WEBGL):'';if(/Intel/i.test(r))os='intel';}catch(_){}
+ }
+ if(os){const card=document.querySelector(`[data-os="${os}"]`);if(card){card.classList.add('mine');card.parentNode.prepend(card);}
+  const guide=document.getElementById(os==='win'?'win-guide':'mac-guide');if(guide)guide.open=true;}
+ // Version label from the latest public release.
+ fetch('https://api.github.com/repos/AstrocanX/dijital-diplomasi/releases/latest').then(r=>r.ok?r.json():null).then(d=>{if(d&&d.tag_name)document.getElementById('version').textContent='sürüm '+d.tag_name.replace(/^v/,'');}).catch(()=>{});
+ const root=document.documentElement,button=document.getElementById('theme');
+ try{const saved=localStorage.getItem('theme');if(saved)root.dataset.theme=saved;}catch(_){}
+ button.onclick=()=>{const dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;root.dataset.theme=dark?'light':'dark';try{localStorage.setItem('theme',root.dataset.theme);}catch(_){}};
+})();
+</script>
+</body>
+</html>
